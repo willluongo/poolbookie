@@ -13,7 +13,7 @@ Have a pool with some colleagues? Use this to keep it all straight!
 ### Bets
 - can have one user
 
-### Weeks
+### Outcomes
 - can have many bets
 
 ## Views
