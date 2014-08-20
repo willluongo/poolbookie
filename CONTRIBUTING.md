@@ -12,11 +12,11 @@ Create a branch named after the feature or issue you are working on:
 
 Make sure the tests pass:
 
-    rake test
+    rake
 
 Make your change. Add tests for your change. Make the tests pass:
 
-    rake test
+    rake
 
 Push to your branch and [submit a pull request][pr].
 
