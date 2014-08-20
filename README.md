@@ -15,3 +15,7 @@ Have a pool with some colleagues? Use this to keep it all straight!
 
 ### Weeks
 - can have many bets
+
+## Views
+
+## Controllers

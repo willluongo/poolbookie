@@ -12,11 +12,11 @@ Create a branch named after the feature or issue you are working on:
 
 Make sure the tests pass:
 
-    rake
+    rake test
 
 Make your change. Add tests for your change. Make the tests pass:
 
-    rake
+    rake test
 
 Push to your branch and [submit a pull request][pr].
 
@@ -29,8 +29,8 @@ some changes or improvements or alternatives.
 Some things that will increase the chance that your pull request is accepted:
 
 * Write tests.
-* Follow our [style guide][style].
+* Follow the [style guide][style].
 * Write a [good commit message][commit].
 
-[style]: https://github.com/thoughtbot/guides/tree/master/style
+[style]: https://github.com/bbatsov/rails-style-guide
 [commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
