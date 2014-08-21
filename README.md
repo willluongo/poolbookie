@@ -10,8 +10,9 @@ Have a pool with some colleagues? Use this to keep it all straight!
 ### Users
 - can have many bets
 
-### Bets
+### Wagers
 - can have one user
+- can have one outcome
 
 ### Outcomes
 - can have many bets

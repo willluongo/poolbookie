@@ -39,4 +39,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 group :development do
 	gem 'pry-rails'
+	gem 'rails-erd'
 end
