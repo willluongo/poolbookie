@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class OutcomeTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "title cannot be null" do
+    refute Outcome.new.valid?
+  end
 end
