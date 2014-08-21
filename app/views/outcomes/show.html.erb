@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @outcome.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @outcome.summary %>
+</p>
+
+<%= link_to 'Edit', edit_outcome_path(@outcome) %> |
+<%= link_to 'Back', outcomes_path %>
