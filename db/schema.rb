@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821000919) do
+ActiveRecord::Schema.define(version: 20140821014648) do
 
   create_table "outcomes", force: true do |t|
     t.string   "title",      null: false
     t.string   "summary"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pool_id"
   end
 
+  add_index "outcomes", ["pool_id"], name: "index_outcomes_on_pool_id"
   add_index "outcomes", ["title"], name: "index_outcomes_on_title", unique: true
 
   create_table "pools", force: true do |t|

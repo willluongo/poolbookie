@@ -18,7 +18,8 @@ class OutcomesControllerTest < ActionController::TestCase
 
   test "should create outcome" do
     assert_difference('Outcome.count') do
-      post :create, outcome: { summary: @outcome.summary, title: Array.new(32){rand(36).to_s(36)}.join }
+      post :create, outcome: { summary: @outcome.summary,
+        title: Array.new(32){rand(36).to_s(36)}.join, pool_id: rand(50) }
     end
 
     assert_redirected_to outcome_path(assigns(:outcome))

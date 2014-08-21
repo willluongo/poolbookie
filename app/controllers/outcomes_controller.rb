@@ -69,6 +69,8 @@ class OutcomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def outcome_params
-      params.require(:outcome).permit(:title, :summary)
+      holder = params.require(:outcome).permit(:title, :summary, :pool_id)
+      holder[:pool_id] = holder[:pool_id].to_i
+      holder
     end
 end
