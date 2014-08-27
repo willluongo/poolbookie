@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  wager: 1
+  wager_cents: 1
 
 two:
   title: MyString
-  wager: 1
+  wager_cents: 1

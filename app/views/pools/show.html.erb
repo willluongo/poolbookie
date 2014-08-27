@@ -24,6 +24,7 @@
     	  <th>Title</th>
     	  <th>Summary</th>
     	  <th>Bets</th>
+    	  <th>Odds</th>
     	  <th>Payout</th>
     	</tr>
   	</thead>
@@ -33,6 +34,7 @@
 		        <td><%= outcome.title %></td>
 		        <td><%= outcome.summary %></td>
 		        <td><%= outcome.wagers.count %></td>
+		        <td><%= Rational(outcome.wagers.count / @pool.outcomes.reduce(0) { |m,o| m + o.wagers.count }) %></td>
 		        <td><%= outcome.wagers.count > 0 ? @pool.total_pot / outcome.wagers.count : 0 %></td>
 		      </tr>
 		<% end %>
