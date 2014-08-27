@@ -44,3 +44,7 @@ group :development do
 	gem 'pry-rails'
 	gem 'rails-erd'
 end
+
+group :production do
+	gem 'mysql2'
+end
