@@ -7,12 +7,12 @@ class Pool < ActiveRecord::Base
   }
 
   validates :title, presence: true
-  
+
   def total_pot
-    @pooltotal = Money.new(0, "USD")
+    pooltotal = Money.new(0, "USD")
     self.outcomes.each do |outcome| 
-    @pooltotal += self.wager * outcome.wagers.count
+      pooltotal += self.wager * outcome.wagers.count
     end
-    return @pooltotal
+    return pooltotal
   end
 end
