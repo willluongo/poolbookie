@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821030903) do
+ActiveRecord::Schema.define(version: 20140827170911) do
 
   create_table "outcomes", force: true do |t|
     t.string   "title",      null: false
@@ -25,10 +25,11 @@ ActiveRecord::Schema.define(version: 20140821030903) do
   add_index "outcomes", ["title"], name: "index_outcomes_on_title", unique: true
 
   create_table "pools", force: true do |t|
-    t.string   "title",                    null: false
-    t.integer  "buy_in",     default: 500, null: false
+    t.string   "title",                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "wager_cents",    default: 500,   null: false
+    t.string   "wager_currency", default: "USD", null: false
   end
 
   create_table "wagers", force: true do |t|

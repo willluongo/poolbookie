@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<h1>
+	<%= @pool.title %>
+</h1>
+
 <p>
-  <strong>Title:</strong>
-  <%= @pool.title %>
+  <strong>Buy in cost:</strong>
+  <%= @pool.wager%>
 </p>
 
 <p>
-  <strong>Buy in:</strong>
-  <%= @pool.buy_in %>
-</p>
+	<strong>Total pot:</strong>
+	<%= @pool.total_pot =%>
+
+
 
 <%= link_to 'Edit', edit_pool_path(@pool) %> |
 <%= link_to 'Back', pools_path %>

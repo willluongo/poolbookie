@@ -18,7 +18,7 @@ class PoolsControllerTest < ActionController::TestCase
 
   test "should create pool" do
     assert_difference('Pool.count') do
-      post :create, pool: { buy_in: @pool.buy_in, title: @pool.title }
+      post :create, pool: { wager: @pool.wager_cents, title: @pool.title }
     end
 
     assert_redirected_to pool_path(assigns(:pool))
@@ -35,7 +35,7 @@ class PoolsControllerTest < ActionController::TestCase
   end
 
   test "should update pool" do
-    patch :update, id: @pool, pool: { buy_in: @pool.buy_in, title: @pool.title }
+    patch :update, id: @pool, pool: { wager_cents: @pool.wager_cents, title: @pool.title }
     assert_redirected_to pool_path(assigns(:pool))
   end
 
