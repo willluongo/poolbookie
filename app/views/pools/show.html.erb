@@ -33,7 +33,7 @@
 		        <td><%= outcome.title %></td>
 		        <td><%= outcome.summary %></td>
 		        <td><%= outcome.wagers.count %></td>
-		        <td><%= @pool.total_pot / outcome.wagers.count %></td>
+		        <td><%= outcome.wagers.count > 0 ? @pool.total_pot / outcome.wagers.count : 0 %></td>
 		      </tr>
 		<% end %>
 	</tbody>
