@@ -32,6 +32,9 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
+# For our money!
+gem 'money-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
