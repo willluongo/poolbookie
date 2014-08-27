@@ -32,6 +32,9 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
+# For our users!
+gem 'devise'
+
 # For our money!
 gem 'money-rails'
 

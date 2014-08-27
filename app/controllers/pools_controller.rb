@@ -1,5 +1,7 @@
 class PoolsController < ApplicationController
   before_action :set_pool, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:edit, :update, :destroy]
+
 
   # GET /pools
   # GET /pools.json
@@ -61,8 +63,8 @@ class PoolsController < ApplicationController
     end
   end
 
-
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_pool
       @pool = Pool.find(params[:id])
