@@ -12,8 +12,30 @@
 <p>
 	<strong>Total pot:</strong>
 	<%= @pool.total_pot =%>
-
-
+</p>
 
 <%= link_to 'Edit', edit_pool_path(@pool) %> |
 <%= link_to 'Back', pools_path %>
+
+<h2>Outcomes</h2>
+<table>
+	<thead>
+    	<tr>
+    	  <th>Title</th>
+    	  <th>Summary</th>
+    	  <th>Bets</th>
+    	  <th>Payout</th>
+    	</tr>
+  	</thead>
+	<tbody>
+		<% @pool.outcomes.each do |outcome| %>
+		      <tr>
+		        <td><%= outcome.title %></td>
+		        <td><%= outcome.summary %></td>
+		        <td><%= outcome.wagers.count %></td>
+		        <td><%= @pool.total_pot / outcome.wagers.count %></td>
+		      </tr>
+		<% end %>
+	</tbody>
+</table>
+
