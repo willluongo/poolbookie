@@ -36,7 +36,8 @@
 		        <td><%= wager_count = outcome.wagers.count %></td>
 		        <td><%= a = @pool.outcomes.reduce(0) { |m,o| m + o.wagers.count } 
 		        if a > 0 
-		        	Rational(a/wager_count)
+		        	odds = Rational(a,wager_count)
+		        	"#{odds.numerator} to #{odds.denominator} against"
 		        else
 		        	"NA"
 		        end %></td>
