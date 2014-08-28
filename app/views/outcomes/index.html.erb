@@ -16,6 +16,7 @@
         <td><%= outcome.summary %></td>
         <td><%= outcome.wagers.count %></td>
         <td><%= link_to 'Show', outcome %></td>
+        <td><%= link_to 'Bet!', profile_path(:outcome => outcome.id), method: :bet %></td>
         <td><%= link_to 'Edit', edit_outcome_path(outcome) %></td>
         <td><%= link_to 'Destroy', outcome, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

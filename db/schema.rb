@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827233916) do
+ActiveRecord::Schema.define(version: 20140828005010) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -72,8 +72,10 @@ ActiveRecord::Schema.define(version: 20140827233916) do
     t.integer  "outcome_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "wagers", ["outcome_id"], name: "index_wagers_on_outcome_id"
+  add_index "wagers", ["user_id"], name: "index_wagers_on_user_id"
 
 end
