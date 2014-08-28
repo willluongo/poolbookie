@@ -33,10 +33,10 @@
 		      <tr>
 		        <td><%= link_to outcome.title, outcome %></td>
 		        <td><%= outcome.summary %></td>
-		        <td><%= outcome.wagers.count %></td>
+		        <td><%= wager_count = outcome.wagers.count %></td>
 		        <td><%= a = @pool.outcomes.reduce(0) { |m,o| m + o.wagers.count } 
 		        if a > 0 
-		        	Rational(outcome.wagers.count  / a )
+		        	Rational(wager_count  / a )
 		        else
 		        	"NA"
 		        end %></td>
