@@ -31,10 +31,15 @@
 	<tbody>
 		<% @pool.outcomes.each do |outcome| %>
 		      <tr>
-		        <td><%= outcome.title %></td>
+		        <td><%= link_to outcome.title, outcome %></td>
 		        <td><%= outcome.summary %></td>
 		        <td><%= outcome.wagers.count %></td>
-		        <td><%= Rational(outcome.wagers.count + 1 / @pool.outcomes.reduce(0) { |m,o| m + o.wagers.count }) %></td>
+		        <td><%= a = @pool.outcomes.reduce(0) { |m,o| m + o.wagers.count } 
+		        if a > 0 
+		        	Rational(outcome.wagers.count  / a )
+		        else
+		        	"NA"
+		        end %></td>
 		        <td><%= outcome.wagers.count > 0 ? @pool.total_pot / outcome.wagers.count : 0 %></td>
 		      </tr>
 		<% end %>
