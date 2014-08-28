@@ -1,6 +1,6 @@
 class PoolsController < ApplicationController
   before_action :set_pool, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, only: [:edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
 
 
   # GET /pools
