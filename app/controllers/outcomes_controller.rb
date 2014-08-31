@@ -1,6 +1,6 @@
 class OutcomesController < ApplicationController
   before_action :set_outcome, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, only: [:edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
 
 
   # GET /outcomes
