@@ -3,6 +3,6 @@
 <% total_wagers = Money.new(0, "USD") %>
 <% current_user.wagers.each do |wager| %>
 <% total_wagers += wager.outcome.pool.wager %>
-<p><%= wager.outcome.title %>: <%= wager.outcome.pool.wager %></p>
+<p><%= link_to wager.outcome.title, outcome_path(wager.outcome) %>: <%= wager.outcome.pool.wager %></p>
 <% end %>
 <h2>Total wagers: <%= total_wagers %></h2>

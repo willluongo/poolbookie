@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<h1>Pool: <%= @outcome.pool.title %> </h1>
+
 
 <p>
   <strong>Title:</strong>
@@ -9,6 +10,8 @@
   <strong>Summary:</strong>
   <%= @outcome.summary %>
 </p>
+
+<p><%= link_to 'Bet!', profile_path(:outcome => @outcome.id), method: :bet %></p>
 
 <%= link_to 'Edit', edit_outcome_path(@outcome) %> |
 <%= link_to 'Back', outcomes_path %>
