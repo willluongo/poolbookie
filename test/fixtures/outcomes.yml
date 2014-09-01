@@ -3,7 +3,7 @@
 one:
   title: MyString
   summary: MyString
-  pool_id: 6
+  pool_id: 1
 
 two:
   title: MyStringTwo
